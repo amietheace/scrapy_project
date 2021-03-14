@@ -78,39 +78,3 @@ class TargetScraper(scrapy.Spider):
                 details_dict
         })
         yield item
-
-
-
-# import requests
-#
-# headers = {
-#     'authority': 'redsky.target.com',
-#     'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"',
-#     'accept': 'application/json',
-#     'sec-ch-ua-mobile': '?0',
-#     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36',
-#     'origin': 'https://www.target.com',
-#     'sec-fetch-site': 'same-site',
-#     'sec-fetch-mode': 'cors',
-#     'sec-fetch-dest': 'empty',
-#     'referer': 'https://www.target.com/p/toddler-girls-shanel-fisherman-sandals-cat-jack/-/A-81204099?preselect=80859208',
-#     'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
-# }
-#
-# params = (
-#     ('key', 'ff457966e64d5e877fdbad070f276d18ecec4a01'),
-#     ('tcin', '81204099'),
-#     ('store_id', '3203'),
-#     ('has_store_id', 'true'),
-#     ('pricing_store_id', '3203'),
-#     ('scheduled_delivery_store_id', '3203'),
-#     ('has_scheduled_delivery_store_id', 'true'),
-#     ('has_financing_options', 'false'),
-# )
-#
-# response = requests.get('https://redsky.target.com/redsky_aggregations/v1/web/pdp_client_v1', headers=headers, params=params)
-#
-# #NB. Original query string below. It seems impossible to parse and
-# #reproduce query strings 100% accurately so the one below is given
-# #in case the reproduced version is not "correct".
-# # response = requests.get('https://redsky.target.com/redsky_aggregations/v1/web/pdp_client_v1?key=ff457966e64d5e877fdbad070f276d18ecec4a01&tcin=81204099&store_id=3203&has_store_id=true&pricing_store_id=3203&scheduled_delivery_store_id=3203&has_scheduled_delivery_store_id=true&has_financing_options=false', headers=headers)
